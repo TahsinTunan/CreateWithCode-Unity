@@ -140,8 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6eabd65ac4f2e4a8e2c8c6a0600a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  turnSpeed: 70
 --- !u!54 &92364883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -670,7 +668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 92364877}
-  offset: {x: 0, y: 8, z: -9}
 --- !u!1001 &596739108
 PrefabInstance:
   m_ObjectHideFlags: 0
