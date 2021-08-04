@@ -669,9 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 92364877}
-  x_offset: 0
-  y_offset: 8
-  z_offset: -9
+  offset: {x: 0, y: 8, z: -9}
 --- !u!1001 &596739108
 PrefabInstance:
   m_ObjectHideFlags: 0
