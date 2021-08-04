@@ -1101,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8780424320546655309, guid: 71782582b9d2cac4cba5251a3b767d13, type: 3}
       propertyPath: m_Name
-      value: Obstacle
+      value: Obstacle (0)
       objectReference: {fileID: 0}
     - target: {fileID: 8780424320546655310, guid: 71782582b9d2cac4cba5251a3b767d13, type: 3}
       propertyPath: m_IsTrigger
@@ -1145,7 +1145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1534297176}
   m_Layer: 0
-  m_Name: ObstacleCollection
+  m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
