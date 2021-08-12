@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float horizontalInput;
+    private float horizontalInput;
     [SerializeField] private float playerSpeed = 10;
-    [SerializeField] private float maxLeft = -15, maxRight = 15;
+    [SerializeField] private float xRange = 15;
 
     void Start()
     {
@@ -18,20 +18,20 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * playerSpeed);
-        keepPlayerInBound(maxLeft, maxRight);
+        keepPlayerInBound(-xRange, xRange);
     }
 
 
-    void keepPlayerInBound(float maxLeft, float maxRight)
+    void keepPlayerInBound(float xLeftRange, float xRightRange)
     {
-        if (transform.position.x <= maxLeft)
+        if (transform.position.x <= xLeftRange)
         {
-            transform.position = new Vector3 (maxLeft, transform.position.y, transform.position.z);
+            transform.position = new Vector3 (xLeftRange, transform.position.y, transform.position.z);
         }
 
-        if (transform.position.x >= maxRight)
+        if (transform.position.x >= xRightRange)
         {
-            transform.position = new Vector3 (maxRight, transform.position.y, transform.position.z);
+            transform.position = new Vector3 (xRightRange, transform.position.y, transform.position.z);
         }
     }
 }
