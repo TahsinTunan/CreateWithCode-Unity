@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            Instantiate(projectile, transform.position, projectile.transform.rotation);
         }
     }
 
