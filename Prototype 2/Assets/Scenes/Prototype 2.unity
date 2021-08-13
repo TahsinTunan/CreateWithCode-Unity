@@ -216,6 +216,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50.000004, y: -60.000004, z: 0}
+--- !u!1 &178209627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 187040, guid: 05554c72f25b7364caea91a88803135d, type: 3}
+  m_PrefabInstance: {fileID: 2089021339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &178209628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178209627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8ae5cee5d69d94ca8cc2ddb5c706b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 0
+--- !u!114 &178209631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178209627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8ae5cee5d69d94ca8cc2ddb5c706b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 5
 --- !u!1001 &255658122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -636,6 +667,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1053028434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 151702, guid: 68a45bf17ac566545b70a13c90a7ee65, type: 3}
+  m_PrefabInstance: {fileID: 1743648909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1053028435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053028434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8ae5cee5d69d94ca8cc2ddb5c706b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 0
+--- !u!114 &1053028438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053028434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8ae5cee5d69d94ca8cc2ddb5c706b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 5
 --- !u!850595691 &1517593649
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -835,6 +897,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a45bf17ac566545b70a13c90a7ee65, type: 3}
+--- !u!1 &1745860103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 140746, guid: 02eca77e7e6a2ec41ba4c68f20e26098, type: 3}
+  m_PrefabInstance: {fileID: 255658122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1745860104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745860103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8ae5cee5d69d94ca8cc2ddb5c706b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 0
+--- !u!114 &1745860107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745860103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8ae5cee5d69d94ca8cc2ddb5c706b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 5
 --- !u!1001 &2089021339
 PrefabInstance:
   m_ObjectHideFlags: 0
