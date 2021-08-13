@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileMoveForward : MonoBehaviour
+public class MoveForward : MonoBehaviour
 {
     [SerializeField] private float projectileSpeed;
 
