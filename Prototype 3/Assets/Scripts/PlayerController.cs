@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRB;
+    private bool isGrounded = true;
     [SerializeField] private float jumpForce = 10;
     [SerializeField] private float gravityMultiplier = 1;
+
 
     void Start()
     {
@@ -17,7 +19,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if ((Input.GetKeyDown(KeyCode.Space)) && isGrounded){
             jump(playerRB, jumpForce);
         }
     }
@@ -25,5 +27,10 @@ public class PlayerController : MonoBehaviour
     void jump(Rigidbody playerRigidBody, float jumpForce)
     {
         playerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        isGrounded = false;
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        isGrounded = true;
     }
 }
