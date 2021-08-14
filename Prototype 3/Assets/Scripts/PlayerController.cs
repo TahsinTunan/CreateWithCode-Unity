@@ -6,10 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRB;
     [SerializeField] private float jumpForce = 10;
+    [SerializeField] private float gravityMultiplier = 1;
 
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
+        Physics.gravity *= gravityMultiplier;
     }
 
     
