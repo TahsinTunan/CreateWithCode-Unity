@@ -5,16 +5,25 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject obstaclePrefab;
+    [SerializeField] private float delayInSecond = 1.5f;
     private Vector3 spawnPosition = new Vector3 (35, 1, 0);
     
     void Start()
     {
-        Instantiate(obstaclePrefab, spawnPosition, obstaclePrefab.transform.rotation);
+        StartCoroutine(delayedSpawn(delayInSecond, obstaclePrefab, spawnPosition));
     }
 
     
     void Update()
     {
         
+    }
+
+    IEnumerator delayedSpawn(float delay, GameObject prefab, Vector3 spawnPosition)
+    {
+        while(true){
+            yield return new WaitForSeconds(delay);
+            Instantiate(prefab, spawnPosition, prefab.transform.rotation);
+        }
     }
 }

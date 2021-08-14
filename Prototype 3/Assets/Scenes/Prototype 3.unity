@@ -425,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 1713772068527924464, guid: d8e2ace3cbda14c4e99a79574c6168a7, type: 3}
+  delayInSecond: 1.5
 --- !u!4 &1427775569
 Transform:
   m_ObjectHideFlags: 0
@@ -584,6 +585,10 @@ PrefabInstance:
     - target: {fileID: 2196852856226580214, guid: 0cf90ca0c5ce6d940b23bf1217d83b26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196852856226978855, guid: 0cf90ca0c5ce6d940b23bf1217d83b26, type: 3}
+      propertyPath: m_Constraints
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 2196852856227076758, guid: 0cf90ca0c5ce6d940b23bf1217d83b26, type: 3}
       propertyPath: m_Name
