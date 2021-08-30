@@ -22,8 +22,8 @@ public class SpawnManager : MonoBehaviour
     IEnumerator delayedSpawn(float delay, GameObject prefab, Vector3 spawnPosition)
     {
         while(true){
-            yield return new WaitForSeconds(delay);
             Instantiate(prefab, spawnPosition, prefab.transform.rotation);
+            yield return new WaitForSeconds(delay);
         }
     }
 }
