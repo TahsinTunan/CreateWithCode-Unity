@@ -6,24 +6,31 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject obstaclePrefab;
     [SerializeField] private float delayInSecond = 1.5f;
-    private Vector3 spawnPosition = new Vector3 (35, 1, 0);
-    
+    private Vector3 spawnPosition = new Vector3(35, 1, 0);
+    private PlayerController playerControllerScript;
+    private Coroutine routine;
+
     void Start()
     {
-        StartCoroutine(delayedSpawn(delayInSecond, obstaclePrefab, spawnPosition));
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        routine = StartCoroutine(delayedSpawn(delayInSecond, obstaclePrefab, spawnPosition));
     }
 
-    
-    void Update()
-    {
-        
-    }
+    void Update() {}
 
     IEnumerator delayedSpawn(float delay, GameObject prefab, Vector3 spawnPosition)
     {
-        while(true){
-            Instantiate(prefab, spawnPosition, prefab.transform.rotation);
-            yield return new WaitForSeconds(delay);
+        while (true)
+        {
+            if (playerControllerScript.getGameOver() == false)
+            {
+                Instantiate(prefab, spawnPosition, prefab.transform.rotation);
+                yield return new WaitForSeconds(delay);
+            }
+            else
+            {
+                yield break;
+            }
         }
     }
 }
