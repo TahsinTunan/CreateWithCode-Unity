@@ -27,16 +27,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void jump(Rigidbody playerRigidBody, float jumpForce)
+    private void jump(Rigidbody playerRigidBody, float jumpForce)
     {
         playerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isGrounded = false;
     }
 
-    void GameOver()
+    private void GameOver()
     {
         gameOver = true;
         Debug.Log(gameOverText);
+    }
+
+    public bool getGameOver()
+    {
+        return gameOver;
     }
 
     private void OnCollisionEnter(Collision other)
