@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRB;
+    private Animator playerAnim;
     private bool isGrounded = true;
     private bool gameOver = false;
     [SerializeField] private string gameOverText = "Game over!";
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody>();
         Physics.gravity *= gravityMultiplier;
+        playerAnim = GetComponent<Animator>();
     }
 
 
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isGrounded = false;
+        playerAnim.SetTrigger("Jump_trig");
     }
 
     private void GameOver()
