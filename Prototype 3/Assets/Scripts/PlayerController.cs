@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = true;
     private bool gameOver = false;
     [SerializeField] private ParticleSystem explosionParticle;
+    [SerializeField] private ParticleSystem dirtParticle;
     [SerializeField] private string gameOverText = "Game over!";
     [SerializeField] private float jumpForce = 10;
     [SerializeField] private float gravityMultiplier = 1;
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isGrounded = false;
+        dirtParticle.Stop();
         playerAnim.SetTrigger("Jump_trig");
     }
 
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
         playerAnim.SetBool("Death_b", true);
         playerAnim.SetInteger("DeathType_int", 1);
         explosionParticle.Play();
+        dirtParticle.Stop();
 
         Debug.Log(gameOverText);
     }
@@ -57,6 +60,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            dirtParticle.Play();
         }
         else if (other.gameObject.CompareTag("Obstacle"))
         {
