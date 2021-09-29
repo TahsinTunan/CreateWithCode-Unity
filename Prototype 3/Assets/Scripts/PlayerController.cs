@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnim;
     private bool isGrounded = true;
     private bool gameOver = false;
+    [SerializeField] private ParticleSystem explosionParticle;
     [SerializeField] private string gameOverText = "Game over!";
     [SerializeField] private float jumpForce = 10;
     [SerializeField] private float gravityMultiplier = 1;
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         gameOver = true;
         playerAnim.SetBool("Death_b", true);
         playerAnim.SetInteger("DeathType_int", 1);
+        explosionParticle.Play();
 
         Debug.Log(gameOverText);
     }
