@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnim;
     private bool isGrounded = true;
     private bool gameOver = false;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip crashSound;
     [SerializeField] private ParticleSystem explosionParticle;
     [SerializeField] private ParticleSystem dirtParticle;
     [SerializeField] private string gameOverText = "Game over!";
